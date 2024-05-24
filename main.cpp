@@ -3,7 +3,7 @@
 #include <algorithm>
 #include "Joc.h"
 map <int, int> mp;
-pair <int, int> p[2005];
+pair <int, int> pp[2005];
 int sortare(pair <int, int> a, pair <int, int> b)
 {
     return a.second < b.second;
@@ -25,18 +25,18 @@ int main() {
     for(auto it : mp)
     {
         cnt ++;
-        p[cnt] = make_pair(it.first, it.second);
+        pp[cnt] = make_pair(it.first, it.second);
     }
-    sort(p + 1, p + cnt + 1, sortare);
+    sort(pp + 1, pp + cnt + 1, sortare);
     for(int i = 1; i <= cnt; i ++)
     {
-        cout << "Ai introdus " << p[i].second;
-        if(p[i].second == 1)
+        cout << "Ai introdus " << pp[i].second;
+        if(pp[i].second == 1)
             cout << " bacnota de ";
         else
             cout << " bacnote de ";
-        cout << p[i].first;
-        if(p[i].first == 1)
+        cout << pp[i].first;
+        if(pp[i].first == 1)
             cout << " leu\n";
         else
             cout << " lei\n";
